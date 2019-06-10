@@ -12,6 +12,7 @@
 		BC1442CE22ADF48B0090D83C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1442CC22ADF48B0090D83C /* Main.storyboard */; };
 		BC1442D022ADF48D0090D83C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1442CF22ADF48D0090D83C /* Assets.xcassets */; };
 		BC1442D322ADF48D0090D83C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1442D122ADF48D0090D83C /* LaunchScreen.storyboard */; };
+		BC1442DC22ADFB7D0090D83C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1442DB22ADFB7D0090D83C /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		BC1442CF22ADF48D0090D83C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1442D222ADF48D0090D83C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1442D422ADF48D0090D83C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1442DB22ADFB7D0090D83C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BC1442DD22ADFBF00090D83C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		BC1442DE22ADFBF00090D83C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1442DC22ADFB7D0090D83C /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				BC1442C722ADF48B0090D83C /* AirFriend */,
 				BC1442C622ADF48B0090D83C /* Products */,
+				BC1442DA22ADFB7D0090D83C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +68,14 @@
 				BC1442D422ADF48D0090D83C /* Info.plist */,
 			);
 			path = AirFriend;
+			sourceTree = "<group>";
+		};
+		BC1442DA22ADFB7D0090D83C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC1442DB22ADFB7D0090D83C /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,11 @@
 				TargetAttributes = {
 					BC1442C422ADF48B0090D83C = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -106,6 +125,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = BC1442BC22ADF48B0090D83C;
 			productRefGroup = BC1442C622ADF48B0090D83C /* Products */;
@@ -147,6 +167,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BC1442CD22ADF48B0090D83C /* Base */,
+				BC1442DD22ADFBF00090D83C /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -155,6 +176,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BC1442D222ADF48D0090D83C /* Base */,
+				BC1442DE22ADFBF00090D83C /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,6 +188,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -227,6 +250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -292,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestony.AirFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bestony.AirFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
